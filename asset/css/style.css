@@ -1,0 +1,605 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Shrikhand&display=swap);
+
+
+
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+
+
+}
+
+body{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+   
+}
+                                      /*Loader*/
+.container_loader{
+    position: fixed;
+    background-image:linear-gradient(#FF79DA,#99E2D0,#9356DC);
+    height: 100vh;
+    inset: 0px;
+    z-index: 2;
+    opacity: 0.8;
+    animation:apparition 1.02s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    transform-origin: center;
+    background-color: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+@keyframes apparition {
+    from{
+        transform: scale(1)
+    }
+    to{
+        transform: scale(0); 
+    }
+    
+}
+.container_loader img{
+    width: 250px;
+    height: 35px;
+    animation: rotation 5s infinite linear;
+}
+@keyframes rotation {
+    to{
+        transform: rotate(390deg);
+    }
+}
+
+.logo{
+    display: block;
+    margin: 0px auto;
+    width: 150px;
+    
+}
+.ombre{
+    padding-bottom: 15px;
+    padding-top: 10px;
+    
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px rgb(192, 190, 190) solid;
+    background-color: rgb(224, 221, 221);
+    padding-right: 20px;
+}
+.box i{
+    padding-right: 15px;
+}
+.en_tete{
+    text-align: center;
+    padding-top: 15px;
+    background-color: rgb(240, 238, 238);
+    padding-bottom: 50px;
+    object-fit: cover;
+}
+.en_tete h2{
+    font-size: 30px;
+}
+.en_tete p{
+    color: gray;
+    font-size: 20px;
+}
+.en_tete button{
+    background-image:linear-gradient( #FF79DA,#9356DC);
+    font-size: 20px;
+    padding: 20px 20px;
+    border-radius: 45px;
+    color: white;
+    border: none;
+}
+                                  /*Fonctionnement 1 2 3*/
+
+.fonctionnement{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 211px;
+
+}
+.fonctionnement h2{
+    margin-left: 20px;
+}
+
+ol{
+    list-style-type: none;
+    counter-reset: nombre;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 25%;
+}
+
+.rond{
+    background-color: #9356DC;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-right: 300px;
+    color: white;
+}
+.alignement{
+    padding-left: 30px;
+}
+.fonctionnement ol button{
+    width: 305px;
+    height: 55px;
+    background-color: rgb(240, 238, 238);
+    margin-bottom: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.fonctionnement ol button:hover{
+    background-color: #e8ddf5;
+    
+}
+
+.fonctionnement li i{
+    padding-left: 15px; 
+    position: absolute;
+    padding-right: 255px;
+}
+
+
+                 /*restaurant*/
+
+#restaurant{
+	background-color: #F2F2F2;
+    padding-bottom: 1px;
+    margin-top: 20px;
+    padding-top: 27px;
+}
+#restaurant .flex-bureau{
+    margin: 0;
+}
+#restaurant a{
+
+	text-decoration: none;
+	color: #000;
+}
+#restaurant .nouveau{
+	position: absolute;
+	background-color: #99E2D0;
+	width: 80px;
+	height: 25px;
+	top: 15px;
+	right: 10px;
+	padding-top: 3px;
+    padding-left: 8px;
+	font-weight: bold;
+	color:#008766;
+}
+#restaurant h2{
+	display: inline-flex;
+	padding-left: 20px;
+}
+#restaurant article{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	/*margin: auto;*/
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: 6px 6px 6px grey;
+	background-color: white;
+	width: 88%;
+	height: 280px;
+    margin-left: 15px;
+}
+#restaurant a{
+	width:100%;
+}
+#restaurant img{
+	border-radius: 10px 10px 0px 0px;
+	height: 200px;
+	width: 100%;
+    object-fit: cover;
+}
+#restaurant h3{
+	margin-top: 15px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+
+}
+#restaurant p{
+	display: flex;
+	font-weight: 100;
+	color: grey;
+	padding-left: 10px;
+    padding-top: 2px;
+	margin: 0px;
+
+}
+/*POSITION COEUR*/
+#restaurant i{
+	position: absolute; /*Il est ensuite positionné par rapport à son ancêtre le plus proche */
+	color: grey;
+	font-size: 25px;
+	right: 35px;
+	bottom: 8px;
+}
+/* PROPRIETE APRES*/
+#restaurant  i:after{
+	content: url(../images/heart-solid-violet\(2\).svg);
+	position: relative;
+	top: -25px;
+	right: 1.2px;
+	opacity: 0;
+	transition: 1s;
+}
+/*AU PASSAGE DE SOURIS DONNE PROPRIETE*/
+#restaurant i:hover:after{
+    opacity: 1;
+	
+}
+                                        /*Footer*/
+.footer{
+    background-color: rgb(68, 67, 67);
+    color: white;
+    padding-bottom: 15px;
+
+}
+.footer a{
+    color: white;
+}
+
+.footer h4{
+    margin: 0 0 0 20px;
+    padding-top: 20px;
+    font-family: 'Shrikhand', cursive;
+}
+ul {
+    list-style-type: none;
+    padding-left: 21px;
+}
+footer i{
+    padding-right: 15px;
+    margin-bottom: 15px;
+}
+footer p{
+    margin-top: 5px;
+}
+
+                                    /* PAGES */
+.logo1{
+width: 150px;
+}
+.fleche{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.fleche i{
+    margin-left: 25px;
+    font-size: x-large;
+    padding-right: 65px;
+}
+.entete_image{
+    width: 100%;
+    object-fit: cover;
+}
+.menu_a_la_francaise{
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: -70px;
+    border: 1px rgb(240, 237, 237) solid;
+    background-color: rgb(245, 242, 242);
+    position: relative;
+    border-radius: 30px;
+    padding-bottom: 60px;
+}
+.titre_coeur{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titre_coeur h1{
+    font-family: 'Shrikhand', cursive;
+}
+.titre_coeur i{
+    font-size: 25px;
+    padding: 22px 15px 0px 0px;
+    color: grey;
+}
+                            /* PROPRIETE APRES*/
+.titre_coeur i:after{
+	content: url(../images/heart-solid-violet\(2\).svg);
+	position: relative;
+	top: -25px;
+	right: 1.2px;
+	opacity: 0;
+	transition: 1s;
+}
+
+         /*AU PASSAGE DE SOURIS DONNE PROPRIETE*/
+.titre_coeur i:hover:after{
+    opacity: 1;
+}
+.menu_a_la_francaise article {
+    position: relative;
+    overflow: hidden;/* CE QUI DEPASSE EST CACHE*/
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 6px 6px 6px grey;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    height: 70px;
+}
+
+                               /*ANIMATION MENU*/
+                         /*ANIMATION DE CHAQUE CLASSE*/
+.entree{
+    animation: move 1s linear ,slide 1s linear;/*affichge de la div de façon linéaire*/
+}
+.plat{
+    animation: move 1s 0.5s linear,slide 1s 0.5s linear; 
+    animation-fill-mode: backwards; /*garde le style du denier element*/
+}
+.dessert{
+    animation: move 1s 0.9s linear,slide 1s 0.9s linear;
+    animation-fill-mode: backwards;
+}
+@keyframes slide{
+    from{opacity: 0 ;}
+    to{opacity: 1  ;}
+}
+@keyframes move{
+    from{transform: translateY(-30px);}
+    to{transform: translateY(0px);}
+}
+.menu_a_la_francaise h2{
+    margin-left: 10px;
+    border-bottom: 3px #99E2D0 solid;
+    width: 55px;
+    padding-bottom: 6px;
+    margin-top: 80px;
+    color: grey;
+    font-size: medium;
+    margin-top: 50px;
+}
+
+          /*Check bouton*/
+.menu{
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 6px 6px 6px grey;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    height: 100px;
+    display: flex;
+    transition: ease-in 1s;
+
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+.commande {
+    flex: 4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.accompagnement_prix {
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: larger;
+    font-weight: bold;
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.description {
+    margin: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.prix {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+}
+
+.check {
+    flex: 0;
+    background-color: #99E2D0;
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in 0.2s;
+}
+.check img {
+    width: 40px;
+    position: relative;
+    transition: 0.5s ease;
+    transform: rotate(90deg);
+}
+.menu:hover .check {
+    flex: 1;
+}
+
+.menu:hover .check img {
+    transform: rotate(0deg);
+}
+          
+a{
+    text-decoration: none;
+    cursor: pointer;
+}         
+            /*code bouton */
+#commander{
+    background-image: linear-gradient( #FF79DA,#9356DC);
+    font-size: 20px;
+    padding: 10px 40px;
+    border-radius: 45px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+#commander:hover{
+	filter:  brightness(1.2);
+	box-shadow: 6px 6px 6px rgb(240, 238, 238);
+}
+.flexcommander{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+      
+              /*tablette*/
+@media screen and (min-width: 768px)
+{
+.logo1{
+    width: 380px;
+}
+.fleche i{
+    padding-right: 200px;
+    padding-top: 15px;
+}
+.logo{
+width: 380px;
+}
+.en_tete h1{
+    font-size: 35px;
+}
+ol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 225px;
+}
+
+.fonctionnement ol button{
+    margin-right: 35px;
+    margin-bottom: 30px;
+}
+.restaurant h2{
+    margin-left: 15px;
+}
+
+.menu_a_la_francaise article{
+    height: 100px;
+    width: 60%;
+}
+}
+                  /*desktop*/
+@media screen and (min-width: 990px){
+	
+.logo1{
+    width: 380px;
+}
+.fleche i{
+    padding-right: 430px;
+    padding-top: 20px;
+}
+ol{
+    flex-direction: row;
+}
+.fonctionnement ol button{
+    max-width: 450px;
+    height: 100px;
+}
+.rond{
+    width: 30px;
+    height: 30px;
+}
+#restaurant article{
+    max-width:550px;
+    margin: 10px;
+}
+.titre_coeur i{
+    font-size: 32px;
+}
+.titre_coeur i:after{
+    top: -32px;
+}
+
+.menu_a_la_francaise {
+    background-color: #F2F2F2;
+    
+}
+.menu_a_la_francaise h1{
+    font-size: 50px;
+}
+.menu_a_la_francaise h2{
+    font-size: 30px;
+    border-bottom: 6px #99E2D0 solid;
+}
+.menu_a_la_francaise h4{
+    font-size:20px;
+}
+.menu_a_la_francaise p{
+    font-size:17px;
+}
+.entete_image{
+    height: 500px;
+}
+.menu_a_la_francaise article{
+    height: 120px;
+    width: 50%;
+    opacity: 0.9
+}
+.menu_a_la_francaise article:after{
+    bottom: 50px;
+}
+#restaurant{
+    padding: 45px 5%;
+}
+#restaurant .flex-bureau{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+}     
+
+
+
+
+
+
+
+
+
